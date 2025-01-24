@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f5f8fa;
+  color: #333;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.auth-container input {
+  margin: 5px;
+  padding: 10px;
+}
+
+.auth-container button {
+  padding: 10px;
+}
+
+.tweet-box {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tweet-box input {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.tweet-box button {
+  padding: 10px;
+}
+
+.tweets-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tweet-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tweet-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tweet-card small {
+  display: block;
+  margin-top: 5px;
+  color: #555;
+}
+
+.like-button {
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.like-button:disabled {
+  background-color: #a8d0f2;
+  cursor: not-allowed;
+}
+
+.like-button.liked {
+  background-color: #004080;
+}
