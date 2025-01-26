@@ -83,7 +83,6 @@ function App() {
     const handleLogout = async () => {
         await signOut(auth);
         setUser(null);
-        // Clear fields after logout
         setEmail("");
         setPassword("");
         setUsername("");
@@ -99,8 +98,8 @@ function App() {
         const tweet = tweets.find((tweet) => tweet.id === id);
 
         const updatedLikedBy = tweet.likedBy?.includes(user.uid)
-            ? tweet.likedBy.filter((uid) => uid !== user.uid) // Unlike
-            : [...(tweet.likedBy || []), user.uid]; // Like
+            ? tweet.likedBy.filter((uid) => uid !== user.uid)
+            : [...(tweet.likedBy || []), user.uid];
 
         await updateDoc(tweetRef, {
             likes: updatedLikedBy.length,
